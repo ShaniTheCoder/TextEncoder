@@ -1,0 +1,6 @@
+_pycache_/
+build/
+dist/
+image/
+convert_png_to_ico.py
+TextEncoder.spec
