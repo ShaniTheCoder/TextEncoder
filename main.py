@@ -4,9 +4,10 @@ from tkinter.messagebox import showerror
 import SecretCodeGenerator as scg
 from pyperclip import copy
 
-
+# Classs definatoin for structuring tkinter window
 class TextEncoder(Tk):
     def __init__(self):
+        """initializing the window"""
         super().__init__()
         self.geometry("371x460")
         self.minsize(371, 482)
@@ -20,6 +21,7 @@ class TextEncoder(Tk):
         self.title("Secret text Encoder")
 
     def Choice(self, event):
+        """This Function is responsible to let user decode and encode from user selection"""
         global out
 
         Scg = scg.SecretCodeLanguage()
@@ -30,21 +32,23 @@ class TextEncoder(Tk):
             out = Scg.decode_string(self.inp.get())
         txt = self.truncate_text(out, 20)
         self.var.set(txt)
-        # except Exception as e:
-        #     showerror("Warning", "Please enter the text first")
         self.text_copy()
 
     def text_copy(self):
+        """Function to copy the text in text field to clip board"""
         global out
         copy(out)
 
     def truncate_text(self, text, length):
+        """Shorten the message to fit the screen (no data is lost by copy user can view complete message)"""
         print(text)
         if len(text) > length:
             return text[:length-3] + "..."
         return text
 
+    # The display window is divided into three scematics Header,Main and footer 
     def Header(self):
+        """Function to render the header of the app"""
         # Frame
         self.frame_header = Frame(self, bg="#444444")
         self.frame_header.pack()
@@ -64,6 +68,7 @@ class TextEncoder(Tk):
         self.choice1.bind("<Button-1>", self.Choice)
 
     def Main(self):
+        """function to render main frame to window"""
         self.frame_main = Frame(self, bg="#444")
         self.frame_main.pack()
         self.inp = Entry(self.frame_main, font="verdana 10")
@@ -82,6 +87,7 @@ class TextEncoder(Tk):
                activebackground="#444444", borderwidth=3, relief='raised', padx=8,   pady=4, command=self.text_copy).grid(columnspan=4, pady=8)
 
     def Footer(self):
+        """function to render the footer of the app to the screen """
         self.frame_footer = Frame(self, bg="#444")
         self.frame_footer.pack(side="bottom")
         Button(self.frame_footer, text="Close", command=lambda: self.destroy(), bg="#333333", fg="cyan", borderwidth=3,
@@ -89,7 +95,7 @@ class TextEncoder(Tk):
 
 
 if __name__ == "__main__":
-    window = TextEncoder()
+    window = TextEncoder() 
     window.Header()
     window.Main()
     window.Footer()
