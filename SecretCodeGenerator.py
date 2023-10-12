@@ -71,7 +71,7 @@ class SecretCodeLanguage:
                 break
             else:
                 print("Invalid input. Please try again.")
-# shani i love you but it seems that you don't love me
+
 
 
 if __name__ == '__main__':
