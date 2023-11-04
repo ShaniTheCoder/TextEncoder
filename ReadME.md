@@ -18,4 +18,4 @@ To use TextEncoder, simply launch the app and select whether you want to encode 
 
 ## Contact
 
-If you have any questions, feedback, or suggestions, please feel free to contact me at [E-mail](shanimishra2304@gmail.com). You can also follow me on [Instagram](https://www.instagram.com/shanimishra252/)
+If you have any questions, feedback, or suggestions, please feel free to contact me at shanimishra2304@gmail.com. You can also follow me on [Instagram](https://www.instagram.com/shanimishra252/)
