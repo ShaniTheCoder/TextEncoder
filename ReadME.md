@@ -6,7 +6,7 @@ TextEncoder is a minimal Windows application with a simple python implementation
 
 - TextEncoder uses a custom algorithm to transform plain texts into encoded texts that are not readable by humans or machines.
 - TextEncoder can also decode the encoded texts back into plain texts, as long as the texts were encoded using this application.
-- TextEncoder allows you to copy or paste the input and output texts, as well as save them as text files.
+- TextEncoder allows you to copy or paste the input and output texts.
 - TextEncoder has a simple and user-friendly interface that lets you choose whether you want to encode or decode texts.
   
 ## Installation and usage
