@@ -39,7 +39,7 @@ class TextEncoder(Tk):
         global out
         copy(out)
 
-    def truncate_text(self, text, length):
+    def truncate_text(self, text : str, length : int) -> str:
         """Shorten the message to fit the screen (no data is lost by copy user can view complete message)"""
         print(text)
         if len(text) > length:

@@ -3,9 +3,9 @@ import pyperclip
 
 class SecretCodeLanguage:
     @staticmethod
-    def encode_string(name):
+    def encode_string(name :str) -> str:
         """Encode the given string."""
-        fir = name[0]
+        fir  = name[0]
         name = list(name)
         name.remove(fir)
         name.append(fir)
@@ -27,7 +27,7 @@ class SecretCodeLanguage:
         return encoded_string
 
     @staticmethod
-    def decode_string(name):
+    def decode_string(name :str) -> str:
         """Decode the given string."""
         name = list(name)
         name.reverse()
